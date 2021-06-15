@@ -45,6 +45,7 @@ namespace Shoes.Providers
         public async Task<ShoesModel> Update(ShoesUpdateModel model)
         {
             var entity = await Get(model.Id);
+            entity.Brand = model.Brand;
             entity.Name = model.Name;
             entity.Category = model.Category;
             entity.Price = model.Price;

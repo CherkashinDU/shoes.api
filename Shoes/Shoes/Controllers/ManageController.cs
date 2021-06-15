@@ -45,6 +45,7 @@ namespace Shoes.Controllers
         }
 
         [HttpDelete]
+        [Route("{id}")]
         public Task Delete(Guid id)
         {
             return _shoesProvider.Delete(id);
